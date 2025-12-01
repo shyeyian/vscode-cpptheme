@@ -2,28 +2,34 @@
 	"name": "cpptheme",
 	"displayName": "cpptheme",
 	"description": "cpptheme",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"publisher": "anonymouspc",
 	"engines": {
 		"vscode": "^1.100.0"
 	},
 	"contributes": {
 		"grammars": [
-            {
-                "path": "./syntax/module.json",
-                "scopeName": "module.injection",
-                "injectTo": ["source.cpp"]
-            },
-            {
-                "path": "./syntax/preprocessor.json",
-                "scopeName": "preprocessor.injection",
-                "injectTo": ["source.cpp"]
-            },
-            {
-                "path": "./syntax/punctuation.json",
-                "scopeName": "punctuation.injection",
-                "injectTo": ["source.cpp"]
-            }
+			{
+				"path": "./syntax/module.json",
+				"scopeName": "module.injection",
+				"injectTo": [
+					"source.cpp"
+				]
+			},
+			{
+				"path": "./syntax/preprocessor.json",
+				"scopeName": "preprocessor.injection",
+				"injectTo": [
+					"source.cpp"
+				]
+			},
+			{
+				"path": "./syntax/punctuation.json",
+				"scopeName": "punctuation.injection",
+				"injectTo": [
+					"source.cpp"
+				]
+			}
 		]
 	},
 	"repository": {
