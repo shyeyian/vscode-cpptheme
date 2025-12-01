@@ -2,11 +2,15 @@
 	"name": "cpptheme",
 	"displayName": "cpptheme",
 	"description": "cpptheme",
-	"version": "1.0.2",
+    "icon": "share/icon.png",
 	"publisher": "anonymouspc",
+	"version": "1.0.2",
 	"engines": {
 		"vscode": "^1.100.0"
 	},
+    "categories": [
+        "Themes"
+    ],
 	"contributes": {
 		"grammars": [
 			{
