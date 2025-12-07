@@ -4,10 +4,12 @@
     "semanticHighlighting": true,
     "semanticTokenColors": {
         "operator": {
-            "foreground": "#ff0000"
+            "foreground": "#ff0000",
+            "fontStyle": ""
         },
         "bracket": {
-            "foreground": "#ff0000"
+            "foreground": "#ff0000",
+            "fontStyle": ""
         },
         "namespace": {
             "foreground": "#00a000",
@@ -66,19 +68,24 @@
             "fontStyle": "bold"
         },
         "variable": {
-            "foreground": "#b4b4b4"
+            "foreground": "#b4b4b4",
+            "fontStyle": ""
         },
         "property": {
-            "foreground": "#b4b4b4"
+            "foreground": "#b4b4b4",
+            "fontStyle": ""
         },
         "parameter": {
-            "foreground": "#b4b4b4"
+            "foreground": "#b4b4b4",
+            "fontStyle": ""
         },
         "label": {
-            "foreground": "#b4b4b4"
+            "foreground": "#b4b4b4",
+            "fontStyle": ""
         },
         "comment": {
-            "foreground": "#808080"
+            "foreground": "#808080",
+            "fontStyle": ""
         }
     },
     "tokenColors": [
@@ -101,7 +108,8 @@
                 "storage.modifier.reference"
             ],
             "settings": {
-                "foreground": "#ff0000"
+                "foreground": "#ff0000",
+                "fontStyle": ""
             }
         },
         {
@@ -116,7 +124,8 @@
                 "string"
             ],
             "settings": {
-                "foreground": "#ff8000"
+                "foreground": "#ff8000",
+                "fontStyle": ""
             }
         },
         {
@@ -130,7 +139,8 @@
                 "keyword.control.try"
             ],
             "settings": {
-                "foreground": "#d0d000"
+                "foreground": "#d0d000",
+                "fontStyle": ""
             }
         },
         {
@@ -139,7 +149,8 @@
                 "keyword.other.unit"
             ],
             "settings": {
-                "foreground": "#00a000"
+                "foreground": "#00a000",
+                "fontStyle": ""
             }
         },
         {
@@ -200,7 +211,8 @@
                 "meta.preprocessor"
             ],
             "settings": {
-                "foreground": "#c000ff"
+                "foreground": "#c000ff",
+                "fontStyle": ""
             }
         },
         {
@@ -216,7 +228,8 @@
                 "support.variable"
             ],
             "settings": {
-                "foreground": "#b4b4b4"
+                "foreground": "#b4b4b4",
+                "fontStyle": ""
             }
         },
         {
@@ -226,7 +239,8 @@
                 "storage.type.class.doxygen.cpp"
             ],
             "settings": {
-                "foreground": "#808080"
+                "foreground": "#808080",
+                "fontStyle": ""
             }
         }
     ],
