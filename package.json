@@ -20,6 +20,13 @@
 				],
 				"path": "grammar/module.json"
 			},
+            {
+                "scopeName": "noexcept.injection",
+                "injectTo": [
+                    "source.cpp"
+                ],
+                "path": "grammar/noexcept.json"
+            },
 			{
 				"scopeName": "preprocessor.injection",
 				"injectTo": [

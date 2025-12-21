@@ -1,0 +1,10 @@
+{
+    "scopeName": "noexcept.injection",
+    "injectionSelector": "L:source.cpp & -comment & -string",
+    "patterns": [
+        {
+            "match": "\\bnoexcept\\b",
+            "name": "storage.modifier.specifier.functional.post-parameters.noexcept.cpp"
+        }
+    ]
+}

@@ -1,6 +1,38 @@
 {
     "name": "cpptheme-light",
     "type": "light",
+    "colors": {
+        "activityBar.background": "#ffffff",
+        "activityBar.foreground": "#000000",
+        "activityBar.activeBorder": "#ffffff",
+        "editor.background": "#ffffff",
+        "editor.findMatchBackground": "#c0c0c0",
+        "editor.findMatchHighlightBackground": "#e0e0e0",
+        "editor.hoverHighlightBackground": "#e0e0e0",
+        "editor.selectionBackground": "#e0e0e0",
+        "editor.snippetTabstopHighlightBackground": "#e0e0e0",
+        "editorBracketMatch.background": "#ffffff",
+        "editorBracketMatch.border": "#808080",
+        "editorGroup.border": "#ffffff",
+        "editorGroupHeader.tabsBackground": "#ffffff",
+        "editorHoverWidget.background": "#ffffff",
+        "editorHoverWidget.border": "#e0e0e0",
+        "editorOverviewRuler.border": "#ffffff",
+        "editorSuggestWidget.background": "#ffffff",
+        "editorSuggestWidget.border": "#e0e0e0",
+        "peekView.border": "#e0e0e0",
+        "peekViewEditor.background": "#ffffff",
+        "peekViewResult.background": "#ffffff",
+        "peekViewTitle.background": "#ffffff",
+        "sideBar.background": "#ffffff",
+        "sideBarSectionHeader.background": "#ffffff",
+        "terminal.border": "#ffffff",
+        "titleBar.activeBackground": "#ffffff",
+        "titleBar.inactiveBackground": "#ffffff",
+        "tab.activeBackground": "#ffffff",
+        "tab.border": "#ffffff",
+        "tab.inactiveBackground": "#ffffff"
+    },
     "semanticHighlighting": true,
     "semanticTokenColors": {
         "operator": {
@@ -138,8 +170,8 @@
                 "keyword.control.try"
             ],
             "settings": {
-                "foreground": "#0080ff",
-                "fontStyle": ""
+                "foreground": "#c000ff",
+                "fontStyle": "bold"
             }
         },
         {
@@ -242,22 +274,5 @@
                 "fontStyle": ""
             }
         }
-    ],
-    "colors": {
-        "activityBar.background": "#ffffff",
-        "activityBar.foreground": "#000000",
-        "activityBar.activeBorder": "#ffffff",
-        "editor.background": "#ffffff",
-        "editor.selectionBackground": "#e0e0e0",
-        "editorBracketMatch.background": "#ffffff",
-        "editorBracketMatch.border": "#808080",
-        "editorGroupHeader.tabsBackground": "#ffffff",
-        "sideBar.background": "#ffffff",
-        "sideBarSectionHeader.background": "#ffffff",
-        "titleBar.activeBackground": "#ffffff",
-        "titleBar.inactiveBackground": "#ffffff",
-        "tab.activeBackground": "#ffffff",
-        "tab.border": "#ffffff",
-        "tab.inactiveBackground": "#ffffff"
-    }
+    ]
 }

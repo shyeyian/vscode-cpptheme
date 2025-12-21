@@ -5,11 +5,11 @@
         {
             "begin": "^(\\s)*#.*\\\\$",
             "end": "^[^\\\\]*$",
-            "name": "meta.preprocessor"
+            "name": "meta.preprocessor.cpp"
         },
         {
             "match": "^(\\s)*#([^/]|/[^/\\*])*",
-            "name": "meta.preprocessor"
+            "name": "meta.preprocessor.cpp"
         }
     ]
 }
