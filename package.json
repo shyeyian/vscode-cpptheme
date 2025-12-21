@@ -4,7 +4,7 @@
 	"description": "cpptheme",
 	"icon": "share/icon.png",
 	"publisher": "anonymouspc",
-	"version": "1.0.10",
+	"version": "1.0.11",
 	"engines": {
 		"vscode": "^1.100.0"
 	},
