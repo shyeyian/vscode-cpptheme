@@ -2,6 +2,7 @@ let child_process = require("child_process")
 let fs = require("fs")
 
 try {
+    child_process.execSync("git pull")
     child_process.execSync("git add .")
     child_process.execSync("git commit -m update")
 }
