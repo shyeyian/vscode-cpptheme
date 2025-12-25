@@ -2,7 +2,7 @@
 	"name": "cpptheme",
 	"displayName": "cpptheme",
 	"description": "cpptheme",
-	"icon": "share/icon.png",
+	"icon": "share/package.png",
 	"publisher": "anonymouspc",
 	"version": "1.1.12",
 	"engines": {
@@ -12,6 +12,25 @@
 		"Themes"
 	],
 	"contributes": {
+		"themes": [
+			{
+				"label": "cpptheme-light",
+				"uiTheme": "vs",
+				"path": "color/light.json"
+			},
+			{
+				"label": "cpptheme-dark",
+				"uiTheme": "vs-dark",
+				"path": "color/dark.json"
+			}
+		],
+		"productIconThemes": [
+			{
+				"label": "cpptheme-icon",
+				"id": "cpptheme-icon",
+				"path": "icon/icon.json"
+			}
+		],
 		"grammars": [
 			{
 				"scopeName": "module.injection",
@@ -40,25 +59,6 @@
 					"source.cpp"
 				],
 				"path": "grammar/punctuation.json"
-			}
-		],
-		"themes": [
-			{
-				"label": "cpptheme-light",
-				"uiTheme": "vs",
-				"path": "theme/light.json"
-			},
-			{
-				"label": "cpptheme-dark",
-				"uiTheme": "vs-dark",
-				"path": "theme/dark.json"
-			}
-		],
-		"productIconThemes": [
-			{
-				"label": "cpptheme-icon",
-				"id": "cpptheme-icon",
-				"path": "theme/icon.json"
 			}
 		]
 	},

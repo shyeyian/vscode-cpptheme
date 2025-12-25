@@ -1,0 +1,21 @@
+{
+    "fonts": [
+        {
+            "id": "cpptheme-icon",
+            "src": [
+                {
+                    "path": "codicon.ttf",
+                    "format": "truetype"
+                }
+            ]
+        }
+    ],
+    "iconDefinitions": { "//": "https://github.com/microsoft/vscode/blob/main/src/vs/base/common/codiconsLibrary.ts",
+        "outline-view-icon": {
+            "fontCharacter": "\\eae9", "//": "file-code"
+        },
+        "run-view-icon": {
+            "fontCharacter": "\\eb2c", "//": "run"
+        }
+    }
+}
