@@ -4,7 +4,7 @@
 	"description": "cpptheme",
 	"icon": "share/icon.png",
 	"publisher": "anonymouspc",
-	"version": "1.1.11",
+	"version": "1.1.12",
 	"engines": {
 		"vscode": "^1.100.0"
 	},
@@ -54,13 +54,13 @@
 				"path": "theme/dark.json"
 			}
 		],
-        "productIconThemes": [
-            {
-                "label": "cpptheme-icon",
-                "id": "cpptheme-icon",
-                "path": "theme/icon.json"
-            }
-        ]
+		"productIconThemes": [
+			{
+				"label": "cpptheme-icon",
+				"id": "cpptheme-icon",
+				"path": "theme/icon.json"
+			}
+		]
 	},
 	"repository": {
 		"type": "git",
