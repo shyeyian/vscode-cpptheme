@@ -1,0 +1,18 @@
+{
+    "fonts": [
+        {
+            "id": "material-icons",
+            "src": [
+                {
+                    "path": "codicon.ttf",
+                    "format": "truetype"
+                }
+            ]
+        }
+    ],
+    "iconDefinitions": {
+        "debug": {
+            "fontCharacter": "\\EB42"
+        }
+    }
+}

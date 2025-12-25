@@ -53,7 +53,14 @@
 				"uiTheme": "vs-dark",
 				"path": "theme/dark.json"
 			}
-		]
+		],
+        "productIconThemes": [
+            {
+                "label": "cpptheme-icon",
+                "id": "cpptheme-icon",
+                "path": "theme/icon.json"
+            }
+        ]
 	},
 	"repository": {
 		"type": "git",
