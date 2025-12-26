@@ -7,15 +7,23 @@
                     "path": "codicon.ttf",
                     "format": "truetype"
                 }
-            ]
+            ],
+            "weight": "normal",
+            "style": "normal"
         }
     ],
-    "iconDefinitions": { "//": "https://github.com/microsoft/vscode/blob/main/src/vs/base/common/codiconsLibrary.ts",
+    "[[codicon file]]": "https://github.com/microsoft/vscode/blob/main/src/vs/base/browser/ui/codicons/codicon/codicon.ttf",
+
+    "iconDefinitions": {
         "outline-view-icon": {
-            "fontCharacter": "\\eae9", "//": "file-code"
+            "fontCharacter": "\\eaa4", 
+            "[[name]]": "book"
         },
         "run-view-icon": {
-            "fontCharacter": "\\eb2c", "//": "run"
+            "fontCharacter": "\\eb9e", 
+            "[[name]]": "run"
         }
-    }
+    },
+    "[[icon list]]": "https://code.visualstudio.com/api/references/icons-in-labels",
+    "[[icon map]]":  "https://github.com/microsoft/vscode/blob/main/src/vs/base/common/codiconsLibrary.ts"
 }
