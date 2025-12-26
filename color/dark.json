@@ -29,7 +29,7 @@
         "list.activeSelectionForeground": "#ffffff",
         "list.dropBackground": "#404040",
         "list.focusOutline": "#606060",
-        "list.hoverBackground": "#000000",
+        "list.hoverBackground": "#00000000",
         "list.hoverForeground": "#ffffff",
         "list.inactiveFocusOutline": "#404040",
         "list.inactiveSelectionBackground": "#000000",
