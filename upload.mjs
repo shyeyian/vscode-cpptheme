@@ -33,6 +33,7 @@ try {
         })
     }
     to_package["contributes"]["localizations"]["translations"].sort()
+    console.log(to_package)
     await fs.promises.writeFile("package.json", JSON.stringify(to_package, null, 4))
 
     // Update locale/main.i18n.json
