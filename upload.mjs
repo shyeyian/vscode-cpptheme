@@ -58,6 +58,7 @@ try {
     json["contents"]["vs/workbench/contrib/typeHierarchy/browser/typeHierarchy.contribution"]["title"]            = "查看类型层次结构"
     for await (let file of await fs.promises.opendir(".tmp/i18n/vscode-language-pack-zh-hans/translations/extensions")) {
         let subjson = JSON.parse((await fs.promises.readFile(`.tmp/i18n/vscode-language-pack-zh-hans/translations/extensions/${file.name}`)).toString())
+        json["contents"] = {...json["contents"], ...subjson["contents"]}
     }
     await fs.promises.writeFile("locale/zh-cn.json", JSON.stringify(json, null, 4))
 } catch (_) {
