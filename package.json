@@ -72,7 +72,7 @@
                 "translations": [
                     {
                         "id": "vscode",
-                        "path": "locale/zh-cn.json"
+                        "path": "lcale/zh-cn.json"
                     }
                 ]
             }
