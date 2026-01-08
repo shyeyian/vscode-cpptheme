@@ -64,6 +64,12 @@ try {
     main["contents"]["vs/workbench/contrib/callHierarchy/browser/callHierarchyTree"]["from"]                      = "被调用 (called)"
     main["contents"]["vs/workbench/contrib/callHierarchy/browser/callHierarchyTree"]["to"]                        = "调用 (call)"
     main["contents"]["vs/workbench/contrib/typeHierarchy/browser/typeHierarchy.contribution"]["title"]            = "查看类型层次结构 (type)"
+    for (let key1 of Object.keys(main["contents"]))
+        for (let key2 of Object.keys(main["contents"][key1]))
+            main["contents"][key1][key2] = main["contents"][key1][key2]
+                .replaceAll("源代码管理", "版本")
+                .replaceAll("资源管理器", "文件")
+                .replaceAll("运行和调试", "调试")
     await fs.promises.writeFile("locale/main.i18n.json", JSON.stringify(main, null, 4))
 
     // Update locale/extensions/*.i18n.json
