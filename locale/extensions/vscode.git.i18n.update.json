@@ -1,8 +1,25 @@
 {
     "contents": {
         "package": {
-            "command.commit": "提交/commit",
-            "command.pull": "拉取/pull"
+            "command.pull"       : "拉取 / pull",
+            "command.push"       : "推送 / push",
+            "command.clone"      : "克隆 / clone",
+            "command.checkout"   : "签出 / checkout",
+            "command.fetch"      : "抓取 / fetch",
+
+            "submenu.commit"           : "提交 / commit",
+            "command.commit"           : "提交  / commit",
+            "command.commitStaged"     : "提交 (已暂存文件) / commit",
+            "command.commitAll"        : "提交 (全部文件) / commit --all",
+            "command.undoCommit"       : "撤销上一次提交 / reset --soft HEAD~1",
+            "command.rebaseAbort"      : "中止变基 / rebase --abort",
+            "command.commitAmend"      : "提交 (修改上一次提交) / commit --amend",
+            "command.commitStagedAmend": "提交 (修改上一次提交, 已暂存文件) / commit --amend",
+            "command.commitAllAmend"   : "提交 (修改上一次提交, 全部文件) / commit --amend --all"
+        },
+        "bundle": {
+            "{0} Commit & Push": "{0} 提交, 推送 / {0} commit && push",
+            "{0} Commit & Sync": "{0} 提交, 拉取, 推送 / {0} commit && pull && push"
         }
     }
 }

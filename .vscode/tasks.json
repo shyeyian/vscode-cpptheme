@@ -14,6 +14,7 @@
             "label": "install",
             "detail": "node install.js",
             "group": "build",
+            "dependsOn": ["build"],
             "command": "node",
             "args": [
                 "install.js"
@@ -23,6 +24,7 @@
             "label": "upload",
             "detail": "node upload.js",
             "group": "build",
+            "dependsOn": ["build"],
             "command": "node",
             "args": [
                 "upload.js"
