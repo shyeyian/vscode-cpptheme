@@ -1,28 +1,82 @@
 {
     "contents": {
         "package": {
-            "command.pull"       : "拉取 / pull",
-            "command.push"       : "推送 / push",
-            "command.clone"      : "克隆 / clone",
-            "command.checkout"   : "签出 / checkout",
-            "command.fetch"      : "抓取 / fetch",
+            "command.pull"                 : "拉取 / pull",
+            "command.push"                 : "推送 / push",
+            "command.clone"                : "克隆 / clone",
+            "command.checkout"             : "签出 / checkout",
+            "command.fetch"                : "抓取 / fetch",
 
-            "submenu.commit"            : "提交 / commit",
-            "command.commit"            : "提交  / commit",
-            "command.commitStaged"      : "提交 (已暂存文件) / commit",
-            "command.commitAll"         : "提交 (全部文件) / commit --all",
-            "command.undoCommit"        : "撤销上一次提交 / reset --soft HEAD~1",
-            "command.rebaseAbort"       : "中止变基 / rebase --abort",
-            "command.commitAmend"       : "提交 (并入上一次提交) / commit --amend",
-            "command.commitStagedAmend" : "提交 (并入上一次提交, 已暂存文件) / commit --amend",
-            "command.commitAllAmend"    : "提交 (并入上一次提交, 全部文件) / commit --amend --all",
-            "command.commitSigned"      : "提交 (署名) / commit -s",
-            "command.commitStagedSigned": "提交 (已暂存文件, 署名) / commit -s",
-            "command.commitAllSigned"   : "提交 (全部文件, 署名) / commit --all -s"
+            "submenu.commit"               : "提交 / commit",
+            "command.commit"               : "提交 (自动选择) / commit [auto]",
+            "command.commitStaged"         : "提交 (已暂存文件) / commit",
+            "command.commitAll"            : "提交 (全部文件) / commit --all",
+            "command.undoCommit"           : "撤销上一次提交 / reset --soft HEAD~1",
+            "command.rebaseAbort"          : "中止变基 / rebase --abort",
+            "command.commitAmend"          : "提交 (并入上一次提交, 交自动选择) / commit --amend [auto]",
+            "command.commitStagedAmend"    : "提交 (并入上一次提交, 已暂存文件) / commit --amend",
+            "command.commitAllAmend"       : "提交 (并入上一次提交, 全部文件) / commit --amend --all",
+            "command.commitSigned"         : "提交 (署名, 自动选择) / commit -s [auto]",
+            "command.commitStagedSigned"   : "提交 (署名, 已暂存文件) / commit -s",
+            "command.commitAllSigned"      : "提交 (署名, 全部文件) / commit -s --all",
+
+            "submenu.changes"              : "暂存, 撤出 / add, restore",
+            "command.stageAll"             : "暂存更改 (全部文件) / add .",
+            "command.unstageAll"           : "撤出更改 (已暂存文件) / restore --staged .",
+            "command.cleanAll"             : "删除更改 (全部文件) / restore .",
+
+            "submenu.pullpush"             : "拉取, 推送 / pull, push",
+            "command.sync"                 : "拉取, 推送 / pull && push",
+            "command.pullRebase"           : "拉取 (变基) / pull --rebase",
+            "command.pullFrom"             : "拉取 (分支) / pull [branch]",
+            "command.pushForce"            : "推送 (强制) / push --force",
+            "command.pushTo"               : "推送 (远程) / push [remote]",
+            "command.pushToForce"          : "推送 (远程, 强制) / push [remote] --force",
+            "command.fetchPrune"           : "抓取 (清理分支) / fetch --prune",
+            "command.fetchAll"             : "抓取 (全部远程) / fetch --all",
+
+            "submenu.branch"               : "分支 / branch",
+            "command.merge"                : "合并 / merge",
+            "command.rebase"               : "变基 / rebase",
+            "command.branch"               : "创建分支 / branch",
+            "command.branchFrom"           : "创建分支 (自从起始点) / branch [ref]",
+            "command.renameBranch"         : "修改分支 (重命名) / branch -m",
+            "command.deleteBranch"         : "修改分支 (删除) / branch -d",
+            "command.deleteRemoteBranch"   : "修改分支 (远程, 删除) / push [remote] --delete",
+            "command.publish"              : "创建分支 (远程, 跟踪) / push [remote] --set-upstream",
+
+            "submenu.remotes"              : "远程 / remote",
+            "command.addRemote"            : "添加远程 / remote add",
+            "command.removeRemote"         : "删除远程 / remote remove",
+
+            "submenu.stash"                : "缓存 / stash",
+            "command.stash"                : "推入缓存 / stash push",
+            "command.stashIncludeUntracked": "推入缓存 (全部文件) / stash push --include-untracked",
+            "command.stashStaged"          : "推入缓存 (已暂存文件) / stash push --staged",
+            "command.stashApplyLatest"     : "应用缓存 (上一条) / stash apply [@{0}]",
+            "command.stashApply"           : "应用缓存 (选择) / stash apply [@{n}]",
+            "command.stashPopLatest"       : "弹出缓存 (上一条) / stash pop [@{0}]",
+            "command.stashPop"             : "弹出缓存 (选择) / stash pop [@{n}]",
+            "command.stashDrop"            : "删除缓存 (选择) / stash drop [@{n}]",
+            "command.stashDropAll"         : "删除缓存 / stash clear",
+            "command.stashView"            : "查看缓存 / stash list",
+
+            "submenu.tags"                 : "标记 / tag",
+            "command.createTag"            : "创建标记 / tag",
+            "command.deleteTag"            : "修改标记 (删除) / tag -d",
+            "command.deleteRemoteTag"      : "修改标记 (远程, 删除) / push [remote] --delele",
+            "command.pushTags"             : "推送标记 (远程) / push [remote]",
+
+            "submenu.worktrees"            : "工作树 / worktree",
+            "command.createWorktree"       : "创建工作树 / worktree add",
+            "command.deleteWorktree"       : "删除工作树 / worktree remove"
         },
         "bundle": {
-            "{0} Commit & Push": "{0} 提交, 推送 / {0} commit && push",
-            "{0} Commit & Sync": "{0} 提交, 拉取, 推送 / {0} commit && pull && push"
+            "{0} Commit"        : "{0} 提交",
+            "{0} Commit (Amend)": "{0} 提交 (并入上一次提交)",
+            "{0} Commit & Push" : "{0} 提交, 推送",
+            "{0} Commit & Sync" : "{0} 提交, 拉取, 推送"
+            
         }
     }
 }
