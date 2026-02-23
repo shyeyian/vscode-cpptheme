@@ -81,8 +81,8 @@
             "command.graphCompareWithRemote"   : "差异 (相较于远程分支) / diff [remote-branch]",
             "command.graphCompareWithMergeBase": "差异 (相较于合并基础) / diff [merge-base]",
             "command.graphCompareRef"          : "差异 (相较于指定节点) / diff [ref]",
-            "command.graphDeleteBranch"        : "操作分支 (删除) / branch --delete",
-            "command.graphDeleteTag"           : "操作标签 (删除) / tag --delete"
+            "command.timelineCopyCommitId"     : "复制 (提交哈希) / log -1 --format=\"%H\"",
+            "command.timelineCopyCommitMessage": "复制 (提交消息) / log -1 --format=\"%B\""
         },
         "bundle": {
             "{0} Commit"                       : "{0} 提交",
