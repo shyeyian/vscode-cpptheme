@@ -42,16 +42,32 @@ async function updateIcon() {
 async function updateLocale() {
     try {
         await _execFile('git', ['clone', 'https://github.com/microsoft/vscode-loc', '.tmp', '--depth', '1'])
-        for await (const diffFile of _recursiveIterateDir('locale'))
-            if (diffFile.endsWith('.diff.json')) {
-                console.log(diffFile)
-                const toFile   = diffFile.replace(/\.diff\.json$/, '.json')
-                console.log(toFile)
-                const fromFile = path.join('.tmp', 'i18n', 'vscode-language-pack-zh-hans', 'translations', path.relative('locale', toFile))
-                console.log(fromFile)
-                const fromJson = JSON.parse((await fs.promises.readFile(fromFile)).toString())
-                const diffJson = JSON.parse((await fs.promises.readFile(diffFile)).toString())
-                const toJson   = _recursiveUpdateJson(fromJson, diffJson)
+        for await (const toFile of _recursiveIterateDir('locale'))
+            if (toFile.endsWith('.i18n.json')) {
+                const fromFile    = path.join('.tmp', 'i18n', 'vscode-language-pack-zh-hans', 'translations', path.relative('locale', toFile))
+                const replaceFile = toFile.replace('.i18n.json', '.i18n.replace.json')
+                const updateFile  = toFile.replace('.i18n.json', '.i18n.update.json')
+                let   fromJson
+                let   toJson
+                let   replaceJson
+                let   updateJson
+                try {
+                    fromJson = JSON.parse((await fs.promises.readFile(fromFile)).toString())
+                } catch (error) {
+                    throw new Error(`failed to parse json file ${fromFile}`, {cause: error})
+                }
+                try {
+                    replaceJson = JSON.parse((await fs.promises.readFile(replaceFile)).toString())
+                } catch (error) {
+                    throw new Error(`failed to parse json file ${replaceFile}`, {cause: error})
+                }
+                try {
+                    updateJson = JSON.parse((await fs.promises.readFile(updateFile)).toString())
+                } catch (error) {
+                    throw new Error(`failed to parse json file ${updateFile}`, {cause: error})
+                }
+                toJson = _recursiveReplaceJson(fromJson, replaceJson)
+                toJson = _recursiveUpdateJson (toJson,   updateJson)
                 await fs.promises.writeFile(toFile, JSON.stringify(toJson, null, 4))
             }
     } finally {
@@ -79,17 +95,36 @@ async function* _recursiveIterateDir(dir) {
 }
 
 /**
+ * @param {_Json} from 
+ * @param {_Json} replace
+ * @returns {_Json} 
+ */
+function _recursiveReplaceJson(from, replace) {
+    const to = {...from}
+    for (const [toKey, toValue] of Object.entries(to))
+        if (typeof toValue == 'string') 
+            for (const [replaceKey, replaceValue] of Object.entries(replace))
+                to[toKey] = to[toKey].replaceAll(replaceKey, replaceValue)
+        else
+            to[toKey] = _recursiveReplaceJson(to[toKey], replace)
+    return to
+}
+
+/**
  * @param {_Json} from
- * @param {_Json} diff
+ * @param {_Json} update
  * @returns {_Json}
  */
-function _recursiveUpdateJson(from, diff) {
+function _recursiveUpdateJson(from, update) {
     const to = {...from}
-    for (const [key, value] of Object.entries(diff))
-        if (typeof value == 'string')
-            to[key] = value
+    for (const [updateKey, updateValue] of Object.entries(update)) {
+        if (!Object.hasOwn(from, updateKey))
+            throw new Error(`key ${updateKey} not found`)
+        if (typeof to[updateKey] == 'string')
+            to[updateKey] = updateValue
         else
-            to[key] = _recursiveUpdateJson(from[key], value)
+            to[updateKey] = _recursiveUpdateJson(to[updateKey], updateValue)
+    }
     return to
 }
 

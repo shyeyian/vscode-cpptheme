@@ -1,0 +1,8 @@
+{
+    "contents": {
+        "package": {
+            "command.commit": "提交/commit",
+            "command.pull": "拉取/pull"
+        }
+    }
+}

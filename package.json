@@ -4,7 +4,7 @@
     "description": "cpptheme",
     "icon": "share/package.png",
     "publisher": "shyeyian",
-    "version": "1.1.82",
+    "version": "1.1.83",
     "engines": {
         "vscode": "^1.100.0"
     },
@@ -75,6 +75,14 @@
                     {
                         "id": "vscode",
                         "path": "locale/main.i18n.json"
+                    },
+                    {
+                        "id": "vscode.git",
+                        "path": "locale/extensions/vscode.git.i18n.json"
+                    },
+                    {
+                        "id": "vscode.references-view",
+                        "path": "locale/extensions/vscode.references-view.i18n.json"
                     }
                 ]
             }

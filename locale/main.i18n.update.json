@@ -1,0 +1,41 @@
+{
+    "contents": {
+        "vs/editor/contrib/gotoSymbol/browser/goToCommands": {
+            "actions.goToDecl.label"          : "转到定义",
+            "actions.goToDeclaration.label"   : "转到声明",
+            "actions.goToTypeDefinition.label": "转到类型",
+            "actions.goToImplementation.label": "转到虚定义",
+            "goToReferences.label"            : "转到引用",
+
+            "peek.submenu"                    : "查看",
+            "actions.previewDecl.label"       : "查看定义",
+            "actions.peekDecl.label"          : "查看声明",
+            "actions.peekTypeDefinition.label": "查看类型",
+            "actions.peekImplementation.label": "查看虚定义",
+            "references.action.label"         : "查看引用"
+        },
+
+        "vs/workbench/contrib/callHierarchy/browser/callHierarchy.contribution": {
+            "title"         : "查看调用层次结构",
+            "title.outgoing": "显示主动调用",
+            "title.incoming": "显示被动调用"
+        },
+        "vs/workbench/contrib/callHierarchy/browser/callHierarchyPeek": {
+            "callFrom"      : "\"{0}\"的主动调用",
+            "callsTo"       : "\"{0}\"的被动调用",
+            "empt.callsFrom": "没有\"{0}\"的主动调用",
+            "empt.callsTo"  : "没有\"{0}\"的被动调用"
+        },
+        "vs/workbench/contrib/typeHierarchy/browser/typeHierarchy.contribution": {
+            "title"           : "查看类型层次结构",
+            "title.supertypes": "显示父类型",
+            "title.subtypes"  : "显示子类型"
+        },
+        "vs/workbench/contrib/typeHierarchy/browser/typeHierarchyPeek": {
+            "supertypes"     : "\"{0}\"的父类型",
+            "subtypes"       : "\"{0}\"的子类型",
+            "empt.supertypes": "没有\"{0}\"的父类型",
+            "empt.subtypes"  : "没有\"{0}\"的子类型"
+        }
+    }
+}
