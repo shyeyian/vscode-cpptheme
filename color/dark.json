@@ -5,6 +5,8 @@
         "activityBar.background": "#000000",
         "activityBar.foreground": "#ffffff",
         "activityBar.activeBorder": "#000000",
+        "debugToolBar.background": "#000000",
+        "debugToolBar.border": "#404040",
         "dropdown.background": "#000000",
         "dropdown.border": "#404040",
         "editor.background": "#000000",
@@ -30,6 +32,10 @@
         "focusBorder": "#606060",
         "input.background": "#000000",
         "input.border": "#404040",
+        "inputOption.activeBackground": "#000000",
+        "inputOption.activeBorder": "#404040",
+        "inputOption.activeForeground": "#ffffff",
+        "inputOption.hoverBackground": "#000000",
         "list.activeSelectionBackground": "#000000",
         "list.activeSelectionForeground": "#ffffff",
         "list.dropBackground": "#404040",
@@ -135,6 +141,10 @@
             "foreground": "#0080ff",
             "fontStyle": "bold"
         },
+        "clsParameter": {
+            "foreground": "#0080ff",
+            "fontStyle": "bold"
+        },
         "variable": {
             "foreground": "#b4b4b4",
             "fontStyle": ""
@@ -165,6 +175,8 @@
                 "keyword.operator.delete.array.bracket",
                 "keyword.operator.logical.python",
                 "keyword.operator.new.cpp",
+                "meta.brace",
+                "punctuation.accessor",
                 "punctuation.definition",
                 "punctuation.definition.list.begin.markdown",
                 "punctuation.parenthesis",

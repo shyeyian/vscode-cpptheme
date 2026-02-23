@@ -12,22 +12,16 @@
             "style": "normal"
         }
     ],
-    "[[codicon file]]": "https://github.com/microsoft/vscode/blob/main/src/vs/base/browser/ui/codicons/codicon/codicon.ttf",
 
     "iconDefinitions": {
         "git-branch-changes": {
-            "fontCharacter": "\\ec6f",
-            "[[name]]": "git-branch"
+            "fontCharacter": "\\ec6f" // git-branch
         },
         "outline-view-icon": {
-            "fontCharacter": "\\eaa4", 
-            "[[name]]": "book"
+            "fontCharacter": "\\eaa4" // book
         },
         "run-view-icon": {
-            "fontCharacter": "\\eb9e", 
-            "[[name]]": "run"
+            "fontCharacter": "\\eb9e" // run
         }
-    },
-    "[[icon list]]": "https://code.visualstudio.com/api/references/icons-in-labels",
-    "[[icon map]]":  "https://github.com/microsoft/vscode/blob/main/src/vs/base/common/codiconsLibrary.ts"
+    }
 }
