@@ -500,7 +500,7 @@
             "command.commitAllNoVerify": "全部提交(不验证)",
             "command.commitAllSigned": "提交 (署名, 全部文件) / commit -s --all",
             "command.commitAllSignedNoVerify": "全部提交(已签收，不验证)",
-            "command.commitAmend": "提交 (并入上一次提交, 交自动选择) / commit --amend [auto]",
+            "command.commitAmend": "提交 (并入上一次提交, 自动选择) / commit --amend [auto]",
             "command.commitAmendNoVerify": "提交(修改，不验证)",
             "command.commitEmpty": "创建空提交",
             "command.commitEmptyNoVerify": "空提交(不验证)",

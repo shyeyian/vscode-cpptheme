@@ -13,7 +13,7 @@
             "command.commitAll"                : "提交 (全部文件) / commit --all",
             "command.undoCommit"               : "撤销上一次提交 / reset --soft HEAD~1",
             "command.rebaseAbort"              : "中止变基 / rebase --abort",
-            "command.commitAmend"              : "提交 (并入上一次提交, 交自动选择) / commit --amend [auto]",
+            "command.commitAmend"              : "提交 (并入上一次提交, 自动选择) / commit --amend [auto]",
             "command.commitStagedAmend"        : "提交 (并入上一次提交, 已暂存文件) / commit --amend",
             "command.commitAllAmend"           : "提交 (并入上一次提交, 全部文件) / commit --amend --all",
             "command.commitSigned"             : "提交 (署名, 自动选择) / commit -s [auto]",
