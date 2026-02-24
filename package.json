@@ -4,7 +4,7 @@
     "description": "cpptheme",
     "icon": "share/package.png",
     "publisher": "shyeyian",
-    "version": "1.1.87",
+    "version": "1.1.88",
     "engines": {
         "vscode": "^1.100.0"
     },
@@ -47,9 +47,7 @@
                 "path": "contribute/grammar/punctuation.json"
             }
         ],
-        "keybindings": [
-
-        ],
+        "keybindings": [],
         "localizations": [
             {
                 "languageId": "zh-cn",
