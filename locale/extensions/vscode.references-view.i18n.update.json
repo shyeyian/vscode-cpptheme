@@ -1,1 +1,23 @@
-{}
+{
+    "contents": {
+        "package": {
+            "cmd.references-view.findReferences"     : "搜索引用",
+            "cmd.references-view.findImplementations": "搜索虚定义",
+            "cmd.references-view.showCallHierarchy"  : "搜索调用层次结构",
+            "cmd.references-view.showTypeHierarchy"  : "搜索类型层次结构",
+
+            "cmd.references-view.showOutgoingCalls"  : "显示主动调用",
+            "cmd.references-view.showIncomingCalls"  : "显示被动调用",
+
+            "cmd.references-view.showSupertypes"     : "显示父类型",
+            "cmd.references-view.showSubtypes"       : "显示子类型"
+        },
+        "bundle": {
+            "Calls From"                             : "主动调用",
+            "Callers Of"                             : "被动调用",
+            
+            "Supertypes Of"                          : "父类型",
+            "Subtypes Of"                            : "子类型"
+        }
+    }
+}
