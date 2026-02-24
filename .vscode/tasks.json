@@ -4,7 +4,7 @@
         {
             "label": "build",
             "detail": "node build.js",
-            "group": "build",
+            "hide": true,
             "command": "node",
             "args": [
                 "build.js"

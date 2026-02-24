@@ -6,45 +6,17 @@ const path          = require('path')
 const util          = require('util')
 
 async function main() {
-    await updateColor()
-    await updateIcon()
-    await updateLocale()
+    await updateLocalization()
+    await updateProductIconTheme()
+    await updateTheme()
 }
 
-async function updateColor() {
-    // Update color/light.json
-    const darkJson  = (await fs.promises.readFile(path.join('color', 'dark.json'))).toString()
-    const lightJson = darkJson.replace(/#[0-9a-f]{6}/, color => {
-        return new Map([
-            ["#000000", "#ffffff"],
-            ["#202020", "#f0f0f0"],
-            ["#404040", "#e0e0e0"],
-            ["#606060", "#d0d0d0"],
-            ["#808080", "#c0c0c0"],
-            ["#ffffff", "#000000"]
-        ]).get(color) ?? color
-    })
-    await fs.promises.writeFile(path.join('color', 'light.json'), lightJson)
-}
-
-async function updateIcon() {
-    try {
-        await _execFile('npm', ['install', '@vscode/codicons', '--prefix', '.tmp'])
-        await fs.promises.copyFile(
-            path.join('.tmp', 'node_modules', '@vscode', 'codicons','dist', 'codicon.ttf'), 
-            path.join('icon', 'codicon.ttf')
-        )
-    } finally {
-        await fs.promises.rm('.tmp', {recursive: true, force: true})
-    }
-}
-
-async function updateLocale() {
+async function updateLocalization() {
     try {
         await _execFile('git', ['clone', 'https://github.com/microsoft/vscode-loc', '.tmp', '--depth', '1'])
-        for await (const toFile of _recursiveIterateDir('locale'))
+        for await (const toFile of _recursiveIterateDir(path.join('contribute', 'localization')))
             if (toFile.endsWith('.i18n.json')) {
-                const fromFile    = path.join('.tmp', 'i18n', 'vscode-language-pack-zh-hans', 'translations', path.relative('locale', toFile))
+                const fromFile    = path.join('.tmp', 'i18n', 'vscode-language-pack-zh-hans', 'translations', path.relative(path.join('contribute', 'localization'), toFile))
                 const replaceFile = toFile.replace('.i18n.json', '.i18n.replace.json')
                 const updateFile  = toFile.replace('.i18n.json', '.i18n.update.json')
                 let   fromJson
@@ -74,6 +46,35 @@ async function updateLocale() {
         await fs.promises.rm('.tmp', {recursive: true, force: true})
     }
 }
+
+async function updateTheme() {
+    // Update color/light.json
+    const darkJson  = (await fs.promises.readFile(path.join('contribute', 'theme', 'cpptheme-dark.json'))).toString()
+    const lightJson = darkJson.replace(/#[0-9a-f]{6}/, color => {
+        return new Map([
+            ["#000000", "#ffffff"],
+            ["#202020", "#f0f0f0"],
+            ["#404040", "#e0e0e0"],
+            ["#606060", "#d0d0d0"],
+            ["#808080", "#c0c0c0"],
+            ["#ffffff", "#000000"]
+        ]).get(color) ?? color
+    })
+    await fs.promises.writeFile(path.join('contribute', 'theme', 'cpptheme-light.json'), lightJson)
+}
+
+async function updateProductIconTheme() {
+    try {
+        await _execFile('npm', ['install', '@vscode/codicons', '--prefix', '.tmp'])
+        await fs.promises.copyFile(
+            path.join('.tmp', 'node_modules', '@vscode', 'codicons','dist', 'codicon.ttf'), 
+            path.join('contribute', 'product-icon-theme', 'codicon.ttf')
+        )
+    } finally {
+        await fs.promises.rm('.tmp', {recursive: true, force: true})
+    }
+}
+
 
 
 

@@ -17,54 +17,38 @@
         "url": "https://github.com/shyeyian/vscode-cpptheme"
     },
     "contributes": {
-        "themes": [
-            {
-                "label": "cpptheme-light",
-                "uiTheme": "vs",
-                "path": "color/light.json"
-            },
-            {
-                "label": "cpptheme-dark",
-                "uiTheme": "vs-dark",
-                "path": "color/dark.json"
-            }
-        ],
-        "productIconThemes": [
-            {
-                "label": "cpptheme-icon",
-                "id": "cpptheme-icon",
-                "path": "icon/icon.json"
-            }
-        ],
         "grammars": [
             {
                 "scopeName": "module.injection",
                 "injectTo": [
                     "source.cpp"
                 ],
-                "path": "grammar/module.json"
+                "path": "contribute/grammar/module.json"
             },
             {
                 "scopeName": "noexcept.injection",
                 "injectTo": [
                     "source.cpp"
                 ],
-                "path": "grammar/noexcept.json"
+                "path": "contribute/grammar/noexcept.json"
             },
             {
                 "scopeName": "preprocessor.injection",
                 "injectTo": [
                     "source.cpp"
                 ],
-                "path": "grammar/preprocessor.json"
+                "path": "contribute/grammar/preprocessor.json"
             },
             {
                 "scopeName": "punctuation.injection",
                 "injectTo": [
                     "source.cpp"
                 ],
-                "path": "grammar/punctuation.json"
+                "path": "contribute/grammar/punctuation.json"
             }
+        ],
+        "keybindings": [
+
         ],
         "localizations": [
             {
@@ -74,17 +58,36 @@
                 "translations": [
                     {
                         "id": "vscode",
-                        "path": "locale/main.i18n.json"
+                        "path": "contribute/localization/main.i18n.json"
                     },
                     {
                         "id": "vscode.git",
-                        "path": "locale/extensions/vscode.git.i18n.json"
+                        "path": "contribute/localization/extensions/vscode.git.i18n.json"
                     },
                     {
                         "id": "vscode.references-view",
-                        "path": "locale/extensions/vscode.references-view.i18n.json"
+                        "path": "contribute/localization/extensions/vscode.references-view.i18n.json"
                     }
                 ]
+            }
+        ],
+        "productIconThemes": [
+            {
+                "label": "cpptheme-icon",
+                "id": "cpptheme-icon",
+                "path": "contribute/product-icon-theme/cpptheme-icon.json"
+            }
+        ],
+        "themes": [
+            {
+                "label": "cpptheme-dark",
+                "uiTheme": "vs-dark",
+                "path": "contribute/theme/cpptheme-dark.json"
+            },
+            {
+                "label": "cpptheme-light",
+                "uiTheme": "vs",
+                "path": "contribute/theme/cpptheme-light.json"
             }
         ]
     }
