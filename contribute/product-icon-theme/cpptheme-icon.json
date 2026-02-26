@@ -14,21 +14,24 @@
     ],
     "iconDefinitions": {
         "git-branch-changes": {
-            "fontCharacter": "\\ec6f" // git-branch
+            "fontCharacter": "\\ec6f", "//": "git-branch"
         },
         "outline-view-icon": {
-            "fontCharacter": "\\eaa4" // book
+            "fontCharacter": "\\eaa4", "//": "book"
+            
         },
         "run-view-icon": {
-            "fontCharacter": "\\eb9e" // run-all
+            "fontCharacter": "\\eb9e", "//": "run-all"
         },
         "debug": {
-            "fontCharacter": "\\eb9e" // run-all
+            "fontCharacter": "\\eb9e", "//": "run-all"
         },
         "callstack-view-session": {
-            "fontCharacter": "\\eb8b" // debug-stackframe
+            "fontCharacter": "\\eb8b", "//": "debug-stackframe"
         }
+    },
+    "//": {
+        "icon": "https://code.visualstudio.com/api/references/icons-in-labels",
+        "font": "https://github.com/microsoft/vscode/blob/main/src/vs/base/common/codiconsLibrary.ts"
     }
-    // icon list: https://code.visualstudio.com/api/references/icons-in-labels,
-    // font list: https://github.com/microsoft/vscode/blob/main/src/vs/base/common/codiconsLibrary.ts
 }

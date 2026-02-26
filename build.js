@@ -17,8 +17,8 @@ async function updateLocalization() {
         for await (const toFile of _recursiveIterateDir(path.join('contribute', 'localization')))
             if (toFile.endsWith('.i18n.json')) {
                 const fromFile    = path.join('.tmp', 'i18n', 'vscode-language-pack-zh-hans', 'translations', path.relative(path.join('contribute', 'localization'), toFile))
-                const replaceFile = toFile.replace('.i18n.json', '.i18n.replace.json')
-                const updateFile  = toFile.replace('.i18n.json', '.i18n.update.json')
+                const replaceFile = toFile.replace(/\.i18n\.json$/, '.i18n.replace.json')
+                const updateFile  = toFile.replace(/\.i18n\.json$/, '.i18n.update.json')
                 let   fromJson
                 let   toJson
                 let   replaceJson

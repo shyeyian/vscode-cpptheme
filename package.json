@@ -16,7 +16,16 @@
         "type": "git",
         "url": "https://github.com/shyeyian/vscode-cpptheme"
     },
+    "main": "contribute/keybinding/rewrite.js",
+    "activationEvents": [
+        "onStartupFinished"
+    ],
     "contributes": {
+        "commands": {
+            "command": "rewriteUserKeybindings",
+            "title": "%rewriteUserKeybindings%",
+            "category": "Preferences"
+        },
         "grammars": [
             {
                 "scopeName": "module.injection",
@@ -47,7 +56,6 @@
                 "path": "contribute/grammar/punctuation.json"
             }
         ],
-        "keybindings": [],
         "localizations": [
             {
                 "languageId": "zh-cn",
