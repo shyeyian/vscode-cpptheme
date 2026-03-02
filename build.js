@@ -6,9 +6,18 @@ const path          = require('path')
 const util          = require('util')
 
 async function main() {
+    await updateKeybinding()
     await updateLocalization()
     await updateProductIconTheme()
     await updateTheme()
+}
+
+async function updateKeybinding() {
+    const linuxFile  = path.join('contribute', 'keybinding', 'linux.update.json')
+    const darwinFile = path.join('contribute', 'keybinding', 'darwin.update.json')
+    const linuxJson  = (await fs.promises.readFile(linuxFile)).toString()
+    const darwinJson = linuxJson.replaceAll('ctrl', 'command')
+    await fs.promises.writeFile(darwinFile, darwinJson)
 }
 
 async function updateLocalization() {

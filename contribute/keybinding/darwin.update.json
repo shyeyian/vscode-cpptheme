@@ -1,1 +1,161 @@
-{}
+[
+    {
+        "key": "command+left",
+        "command": "cursorWordLeft",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "command+right",
+        "command": "cursorWordRight",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "command+backspace",
+        "command": "deleteWordLeft",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "command+delete",
+        "command": "deleteWordRight",
+        "when": "textInputFocus"
+    },
+
+    {
+        "key": "command+a",
+        "command": "editor.action.selectAll",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "command+a",
+        "command": "list.selectAll",
+        "when": "listFocus"
+    },
+    {
+        "key": "command+c",
+        "command": "editor.action.clipboardCopyAction",
+        "when": "editorFocus"
+    },
+    {
+        "key": "command+c",
+        "command": "filesExplorer.copy",
+        "when": "filesExplorerFocus"
+    },
+    {
+        "key": "command+f",
+        "command": "actions.find",
+        "when": "editorFocus"
+    },
+    {
+        "key": "command+f",
+        "command": "workbench.action.terminal.focusFind",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "command+n",
+        "command": "workbench.action.files.newUntitledFile",
+        "when": "editorFocus"
+    },
+    {
+        "key": "command+n",
+        "command": "workbench.action.terminal.new",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "command+o",
+        "command": "workbench.action.files.openFile",
+        "when": "editorFocus"
+    },
+    {
+        "key": "command+s",
+        "command": "workbench.action.files.save",
+        "when": "editorFocus"
+    },
+    {
+        "key": "command+v",
+        "command": "editor.action.clipboardPasteAction",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "command+v",
+        "command": "filesExplorer.paste",
+        "when": "filesExplorerFocus"
+    },
+    {
+        "key": "command+w",
+        "command": "workbench.action.closeActiveEditor",
+        "when": "true"
+    },
+    {
+        "key": "command+x",
+        "command": "editor.action.clipboardCutAction",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "command+x",
+        "command": "fileExplorer.cut",
+        "when": "filesExplorerFocus"
+    },
+    {
+        "key": "command+y",
+        "command": "redo"
+    },
+    {
+        "key": "command+z",
+        "command": "undo"
+    },
+
+
+
+    {
+        "key": "command+shift+c",
+        "command": "workbench.action.terminal.copySelection",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "command+shift+v",
+        "command": "workbench.action.terminal.paste",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "command+shift+w",
+        "command": "workbench.action.reopenClosedEditor",
+        "when": "true"
+    },
+
+    {
+        "key": "command+shift+.",
+        "command": "workbench.action.showCommands"
+    },
+    {
+        "key": "command+shift+n",
+        "command": "workbench.action.newWindow"
+    },
+    {
+        "key": "command+shift+g",
+        "command": "workbench.scm.focus"
+    },
+    {
+        "key": "command+shift+e",
+        "command": "workbench.explorer.fileView.focus"
+    },
+    {
+        "key": "command+shift+o",
+        "command": "outline.focus"
+    },
+    {
+        "key": "command+shift+t",
+        "command": "terminal.focus"
+    },
+    {
+        "key": "command+shift+r",
+        "command": "workbench.debug.action.focusRepl"
+    },
+    {
+        "key": "command+shift+f",
+        "command": "workbench.view.search.focus"
+    },
+    {
+        "key": "command+shift+x",
+        "command": "workbench.view.extensions"
+    }
+]
