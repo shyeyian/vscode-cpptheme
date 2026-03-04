@@ -20,12 +20,12 @@ async function rewriteUserKeybindings(context) {
     try {
         defaultKeybindingsJson = JSON.parse((await vscode.workspace.fs.readFile(defaultKeybindingsFile)).toString().replaceAll(/\/\/.*$/gm, ''))
     } catch (error) {
-        throw new Error(`failed to parse json file ${defaultKeybindingsFile}`, {cause: error})
+        throw new Error(`failed to parse json file (with file = ${defaultKeybindingsFile})`, {cause: error})
     }
     try {
         updateKeybindingsJson = JSON.parse((await vscode.workspace.fs.readFile(updateKeybindingsFile)).toString().replaceAll(/\/\/.*$/gm, ''))
     } catch (error) {
-        throw new Error(`failed to parse json file ${updateKeybindingsFile}`, {cause: error})
+        throw new Error(`failed to parse json file (with file = ${updateKeybindingsFile})`, {cause: error})
     }
     const resetDefaultKeybindingJson = []
     for (const keybinding of defaultKeybindingsJson)
