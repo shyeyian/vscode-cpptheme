@@ -17,11 +17,7 @@
             "fontCharacter": "\\ec6f", "//": "git-branch"
         },
         "outline-view-icon": {
-            "fontCharacter": "\\eaa4", "//": "book"
-            
-        },
-        "run-view-icon": {
-            "fontCharacter": "\\eb9e", "//": "run-all"
+            "fontCharacter": "\\eaa4", "//": "book"  
         },
         "debug": {
             "fontCharacter": "\\eb9e", "//": "run-all"
