@@ -4,7 +4,7 @@
     "description": "cpptheme",
     "icon": "share/package.png",
     "publisher": "shyeyian",
-    "version": "1.1.102",
+    "version": "1.1.103",
     "engines": {
         "vscode": "^1.100.0"
     },
