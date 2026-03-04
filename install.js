@@ -8,18 +8,17 @@ const localization_make       = require('./contribute/localization/make.js')
 const product_icon_theme_make = require('./contribute/product-icon-theme/make.js')
 const theme_make              = require('./contribute/theme/make.js')
 
-async function make() {
+async function install() {
+    // Make extension
     await keybinding_make        .make()
     await localization_make      .make()
     await product_icon_theme_make.make()
     await theme_make             .make()
-}
 
-async function install() {
+    // Install extension
     await util.promisify(child_process.execFile)('vsce', ['package', '-o', 'cpptheme.vsix'])
     await util.promisify(child_process.execFile)('code', ['--install-extension', 'cpptheme.vsix'])
     await fs.promises.rm('cpptheme.vsix')
 }
 
-make()
 install()
