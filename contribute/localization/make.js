@@ -5,24 +5,9 @@ const fs            = require('fs')
 const path          = require('path')
 const util          = require('util')
 
-async function main() {
-    await updateKeybinding()
-    await updateLocalization()
-    await updateProductIconTheme()
-    await updateTheme()
-}
-
-async function updateKeybinding() {
-    const linuxFile  = path.join('contribute', 'keybinding', 'linux.update.json')
-    const darwinFile = path.join('contribute', 'keybinding', 'darwin.update.json')
-    const linuxJson  = (await fs.promises.readFile(linuxFile)).toString()
-    const darwinJson = linuxJson.replaceAll(/\bctrl\b/g, 'cmd')
-    await fs.promises.writeFile(darwinFile, darwinJson)
-}
-
-async function updateLocalization() {
+async function make() {
     try {
-        await _execFile('git', ['clone', 'https://github.com/microsoft/vscode-loc', '.tmp', '--depth', '1'])
+        await util.promisify(child_process.execFile)('git', ['clone', 'https://github.com/microsoft/vscode-loc', '.tmp', '--depth', '1'])
         for await (const toFile of _recursiveIterateDir(path.join('contribute', 'localization')))
             if (toFile.endsWith('.i18n.json')) {
                 const fromFile    = path.join('.tmp', 'i18n', 'vscode-language-pack-zh-hans', 'translations', path.relative(path.join('contribute', 'localization'), toFile))
@@ -56,40 +41,11 @@ async function updateLocalization() {
     }
 }
 
-async function updateTheme() {
-    // Update color/light.json
-    const darkJson  = (await fs.promises.readFile(path.join('contribute', 'theme', 'cpptheme-dark.json'))).toString()
-    const lightJson = darkJson.replace(/#[0-9a-f]{6}/, color => {
-        return new Map([
-            ["#000000", "#ffffff"],
-            ["#202020", "#f0f0f0"],
-            ["#404040", "#e0e0e0"],
-            ["#606060", "#d0d0d0"],
-            ["#808080", "#c0c0c0"],
-            ["#ffffff", "#000000"]
-        ]).get(color) ?? color
-    })
-    await fs.promises.writeFile(path.join('contribute', 'theme', 'cpptheme-light.json'), lightJson)
-}
-
-async function updateProductIconTheme() {
-    try {
-        await _execFile('npm', ['install', '@vscode/codicons', '--prefix', '.tmp'])
-        await fs.promises.copyFile(
-            path.join('.tmp', 'node_modules', '@vscode', 'codicons','dist', 'codicon.ttf'), 
-            path.join('contribute', 'product-icon-theme', 'codicon.ttf')
-        )
-    } finally {
-        await fs.promises.rm('.tmp', {recursive: true, force: true})
-    }
-}
-
+module.exports = {make}
 
 
 
 /** @typedef {Record<string, any>} _Json */
-
-const _execFile = util.promisify(child_process.execFile)
 
 /**
  * @param {string} dir
@@ -137,7 +93,3 @@ function _recursiveUpdateJson(from, update) {
     }
     return to
 }
-
-
-
-main()

@@ -37,11 +37,9 @@ async function rewriteUserKeybindings(context) {
     await vscode.workspace.fs.writeFile(userKeybindingFile, Buffer.from(JSON.stringify(userKeyBindingJson, null, 4)))
 }
 
-
-
 /**
  * @param {vscode.ExtensionContext} context
- * @returns {undefined}
+ * @returns {void}
  */
 function activate(context) {
     context.subscriptions.push(vscode.commands.registerCommand('rewriteUserKeybindings', async () => {
