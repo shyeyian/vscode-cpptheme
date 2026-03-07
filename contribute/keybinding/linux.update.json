@@ -106,7 +106,7 @@
         "key": "shift+tab",
         "command": "outdent",
         "when": "editorFocus"
-    }
+    },
 
 
 
