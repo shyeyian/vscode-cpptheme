@@ -10,7 +10,7 @@ const vscode  = require('vscode')
 async function rewriteUserKeybindings(context) {
     await vscode.commands.executeCommand('workbench.action.openGlobalKeybindingsFile')
     const defaultKeybindingsFile = vscode.Uri.parse('vscode://defaultsettings/keybindings.json')
-    const updateKeybindingsFile  = vscode.Uri.joinPath(context.extensionUri, `contribute/keybinding/${process.platform}.update.json`)
+    const updateKeybindingsFile  = vscode.Uri.joinPath(context.extensionUri, 'contribute', 'keybinding', `${process.platform}.update.json`)
     const userKeybindingFile     = vscode.window.activeTextEditor?.document.uri
     let   defaultKeybindingsJson
     let   updateKeybindingsJson
