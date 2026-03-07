@@ -3,10 +3,10 @@
 const child_process           = require('child_process')
 const fs                      = require('fs')
 const util                    = require('util')
-const keybinding_make         = require('./contribute/keybinding/make.js')
-const localization_make       = require('./contribute/localization/make.js')
-const product_icon_theme_make = require('./contribute/product-icon-theme/make.js')
-const theme_make              = require('./contribute/theme/make.js')
+const keybinding_make         = require('./contribute/keybinding/make')
+const localization_make       = require('./contribute/localization/make')
+const product_icon_theme_make = require('./contribute/product-icon-theme/make')
+const theme_make              = require('./contribute/theme/make')
 
 async function upload() {
     // Make extension

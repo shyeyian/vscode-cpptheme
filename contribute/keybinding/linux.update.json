@@ -19,7 +19,6 @@
         "command": "deleteWordRight",
         "when": "textInputFocus"
     },
-
     {
         "key": "ctrl+a",
         "command": "editor.action.selectAll",
@@ -103,6 +102,11 @@
         "key": "ctrl+z",
         "command": "undo"
     },
+    {
+        "key": "shift+tab",
+        "command": "outdent",
+        "when": "editorFocus"
+    }
 
 
 
@@ -121,7 +125,6 @@
         "command": "workbench.action.reopenClosedEditor",
         "when": "true"
     },
-
     {
         "key": "ctrl+shift+.",
         "command": "workbench.action.showCommands"

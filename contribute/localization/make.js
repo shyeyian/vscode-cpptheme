@@ -45,7 +45,7 @@ module.exports = {make}
 
 
 
-/** @typedef {Record<string, any>} _Json */
+/** @typedef {any} _Json */
 
 /**
  * @param {string} dir
