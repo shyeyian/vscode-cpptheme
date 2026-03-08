@@ -24,7 +24,7 @@
     "contributes": {
         "commands": {
             "command": "rewriteUserKeybindings",
-            "title": "%rewriteUserKeybindings%",
+            "title": "%Rewrite User Keybindings%",
             "category": "Preferences"
         },
         "grammars": [
