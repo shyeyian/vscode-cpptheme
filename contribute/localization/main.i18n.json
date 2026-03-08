@@ -5552,7 +5552,7 @@
             "terminal.integrated.accessibleView.closeOnKeyPress": "在 keypress 上，关闭辅助视图，将焦点放在调用它的元素上。",
             "verbosity.chat.description": "提供有关如何在聚焦聊天输入时访问聊天帮助菜单的信息。",
             "verbosity.comments": "提供有关可在注释小组件或包含注释的文件中执行的操作的信息。",
-            "verbosity.debug": "提供有关在聚焦调试控制台或运行和调试 viewlet 时如何访问调试控制台辅助功能帮助对话框的信息。请注意，需要重新加载窗口才能使其生效。",
+            "verbosity.debug": "提供有关在聚焦调试控制台或运行 viewlet 时如何访问调试控制台辅助功能帮助对话框的信息。请注意，需要重新加载窗口才能使其生效。",
             "verbosity.diffEditor.description": "提供有关如何在聚焦差异编辑器时在其中导航更改的信息。",
             "verbosity.diffEditorActive": "指示差异编辑器何时成为活动编辑器。",
             "verbosity.emptyEditorHint": "在空文本编辑器中提供有关相关操作的信息。",
@@ -8349,7 +8349,7 @@
             "debug.gutterMiddleClickAction.logpoint": "添加记录点。",
             "debug.gutterMiddleClickAction.none": "不要执行任何操作。",
             "debug.gutterMiddleClickAction.triggeredBreakpoint": "添加触发的断点。",
-            "debug.hideLauncherWhileDebugging": "调试处于活动状态时，在“运行和调试”视图的标题栏中隐藏“启动调试”控件。仅当 {0} 未“停靠”时才相关。",
+            "debug.hideLauncherWhileDebugging": "调试处于活动状态时，在“运行”视图的标题栏中隐藏“启动调试”控件。仅当 {0} 未“停靠”时才相关。",
             "debug.hideSlowPreLaunchWarning": "隐藏“preLaunchTask”运行一段时间后显示的警告。",
             "debug.onTaskErrors": "控制在运行预启动任务后遇到错误时应该怎么做。",
             "debug.saveBeforeStart": "控制在启动调试会话前要保存哪些编辑器。",
@@ -8400,7 +8400,7 @@
             "removeWatchExpression": "删除表达式",
             "restartFrame": "重启框架",
             "run": "运行或调试...",
-            "run and debug": "运行和调试",
+            "run and debug": "运行",
             "runMenu": "运行",
             "setValue": "设置值",
             "showBreakpointsInOverviewRuler": "控制断点是否应显示在概览标尺中。",
@@ -8752,7 +8752,7 @@
             "repl.input": "可以使用“焦点下一个小组件”命令 {0} 从输出导航到调试控制台输入。",
             "repl.lazyVariables": "设置“debug.expandLazyVariables”控制是否自动计算变量。默认情况下，在使用屏幕阅读器时启用此功能。",
             "repl.output": "可以使用“焦点上一个小组件”命令 {0} 从输入字段导航到调试控制台输出。",
-            "repl.showRunAndDebug": "“显示运行”和“调试视图”命令{0}将打开“运行和调试”视图，并提供有关调试的详细信息。"
+            "repl.showRunAndDebug": "“显示运行”和“调试视图”命令{0}将打开“运行”视图，并提供有关调试的详细信息。"
         },
         "vs/workbench/contrib/debug/browser/replViewer": {
             "debugConsole": "调试控制台",
@@ -8769,7 +8769,7 @@
             "debug.focusWatch": "-“调试：聚焦监视视图”命令{0}将聚焦监视视图。",
             "debug.help": "在调试控制台中访问调试输出并计算表达式，调试控制台可以通过{0}进行聚焦。",
             "debug.restartDebugging": "-“调试：重新启动调试”命令{0}将重新启动当前调试会话。",
-            "debug.showRunAndDebug": "“显示运行和调试”视图命令{0}将打开当前视图。",
+            "debug.showRunAndDebug": "“显示运行”视图命令{0}将打开当前视图。",
             "debug.startDebugging": "“调试：启动调试”命令{0}将启动调试会话。",
             "debug.stepInto": "-“调试：单步执行”命令{0}将单步执行下一个函数调用。",
             "debug.stepOut": "-“调试：单步跳出”命令{0}将单步跳出当前函数调用。",
@@ -8809,11 +8809,11 @@
         },
         "vs/workbench/contrib/debug/browser/welcomeView": {
             "allDebuggersDisabled": "禁用所有调试扩展。启用调试扩展或从市场安装新的扩展。",
-            "customizeRunAndDebug2": "要自定义运行和调试，请[创建一个 launch.json 文件]({0})。",
-            "customizeRunAndDebugOpenFolder2": "要自定义运行和调试，请[打开文件夹]({0})并创建一个 launch.json 文件。",
+            "customizeRunAndDebug2": "要自定义运行，请[创建一个 launch.json 文件]({0})。",
+            "customizeRunAndDebugOpenFolder2": "要自定义运行，请[打开文件夹]({0})并创建一个 launch.json 文件。",
             "openAFileWhichCanBeDebugged": "[打开文件](command:{0})，可调试或运行。",
             "run": "运行",
-            "runAndDebugAction": "运行和调试"
+            "runAndDebugAction": "运行"
         },
         "vs/workbench/contrib/debug/common/abstractDebugAdapter": {
             "timeout": "对于“{1}”，{0} 毫秒后超时 "
