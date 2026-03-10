@@ -103,6 +103,11 @@
         "command": "undo"
     },
     {
+        "key": "ctrl+/",
+        "command": "editor.action.commentLine",
+        "when": "editorFocus"
+    },
+    {
         "key": "shift+tab",
         "command": "outdent",
         "when": "editorFocus"
@@ -154,11 +159,15 @@
         "command": "workbench.debug.action.focusRepl"
     },
     {
+        "key": "ctrl+shift+i",
+        "command": "workbench.action.chat.open"
+    },
+    {
         "key": "ctrl+shift+f",
-        "command": "workbench.view.search.focus"
+        "command": "workbench.action.findInFiles"
     },
     {
         "key": "ctrl+shift+x",
-        "command": "workbench.view.extensions"
+        "command": "workbench.extensions.action.focusExtensionsView"
     }
 ]
