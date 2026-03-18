@@ -112,6 +112,26 @@
         "command": "outdent",
         "when": "editorFocus"
     },
+    {
+        "key": "shift+up",
+        "command": "cursorUpSelect",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "shift+down",
+        "command": "cursorDownSelect",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "shift+left",
+        "command": "cursorLeftSelect",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "shift+right",
+        "command": "cursorRightSelect",
+        "when": "textInputFocus"
+    },
 
 
 
