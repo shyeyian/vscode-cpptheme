@@ -42,8 +42,9 @@ async function rewriteUserKeybindings(context) {
  * @returns {void}
  */
 function activate(context) {
-    context.subscriptions.push(vscode.commands.registerCommand('rewriteUserKeybindings', async () => {
-        await rewriteUserKeybindings(context)
+    if (vscode.env.remoteName != undefined)
+        context.subscriptions.push(vscode.commands.registerCommand('rewriteUserKeybindings', async () => {
+            await rewriteUserKeybindings(context)
     }))
 }
 
