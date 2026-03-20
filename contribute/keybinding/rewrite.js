@@ -48,6 +48,7 @@ async function rewriteUserKeybindings(context) {
 function activate(context) {
     context.subscriptions.push(vscode.commands.registerCommand('rewriteUserKeybindings', async () => {
         await rewriteUserKeybindings(context)
+    }))
 }
 
 module.exports = {activate}
