@@ -289,6 +289,10 @@
         {
             "scope": [
                 "entity.other.attribute",
+                "keyword.other.export",
+                "keyword.other.import",
+                "keyword.other.module",
+                "entity.name.module",
                 "meta.preprocessor"
             ],
             "settings": {
