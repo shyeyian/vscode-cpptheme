@@ -8,6 +8,10 @@ const vscode  = require('vscode')
  * @returns {Promise<void>}
  */
 async function rewriteUserKeybindings(context) {
+    if (vscode.env.remoteName != undefined) {
+        await vscode.window.showErrorMessage('not available in remote mode')
+        return
+    }
     await vscode.commands.executeCommand('workbench.action.openGlobalKeybindingsFile')
     const defaultKeybindingsFile = vscode.Uri.parse('vscode://defaultsettings/keybindings.json')
     const updateKeybindingsFile  = vscode.Uri.joinPath(context.extensionUri, 'contribute', 'keybinding', `${process.platform}-update.json`)
@@ -42,10 +46,8 @@ async function rewriteUserKeybindings(context) {
  * @returns {void}
  */
 function activate(context) {
-    if (vscode.env.remoteName != undefined)
-        context.subscriptions.push(vscode.commands.registerCommand('rewriteUserKeybindings', async () => {
-            await rewriteUserKeybindings(context)
-    }))
+    context.subscriptions.push(vscode.commands.registerCommand('rewriteUserKeybindings', async () => {
+        await rewriteUserKeybindings(context)
 }
 
 module.exports = {activate}

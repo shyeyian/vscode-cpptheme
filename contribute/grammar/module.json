@@ -3,7 +3,7 @@
     "injectionSelector": "L:source.cpp & -comment & -string",
     "patterns": [
         {
-            "match": "\\b(export\\s+module|module|import)\\s+([\\w\\.:]*)",
+            "match": "^\\s*((?:export\\s+)?module|(?:export\\s+)?import)\\s+([\\w\\.\\s:]*)\\s*(;)\\s*$",
             "captures": {
                 "1": {
                     "patterns": [
@@ -30,6 +30,35 @@
                         {
                             "match": "[\\.:]",
                             "name": "punctuation.separator.module.cpp"
+                        }
+                    ]
+                },
+                "3": {
+                    "patterns": [
+                        {
+                            "match": ";",
+                            "name": "punctuation.terminator.module.cpp"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "match": "^\\s*(module)\\s*(;)\\s*$",
+            "captures": {
+                "1": {
+                    "patterns": [
+                        {
+                            "match": "module",
+                            "name": "keyword.other.module.cpp"
+                        }
+                    ]
+                },
+                "2": {
+                    "patterns": [
+                        {
+                            "match": ";",
+                            "name": "punctuation.terminator.module.cpp"
                         }
                     ]
                 }
