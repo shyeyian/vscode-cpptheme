@@ -289,9 +289,6 @@
         {
             "scope": [
                 "entity.other.attribute",
-                "keyword.other.export",
-                "keyword.other.import",
-                "keyword.other.module",
                 "meta.preprocessor"
             ],
             "settings": {
