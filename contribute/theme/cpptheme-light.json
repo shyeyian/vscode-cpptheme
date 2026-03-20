@@ -288,14 +288,11 @@
         },
         {
             "scope": [
-                "entity.name.module",
                 "entity.other.attribute",
                 "keyword.other.export",
                 "keyword.other.import",
                 "keyword.other.module",
-                "meta.preprocessor",
-                "punctuation.separator.module",
-                "punctuation.terminator.module"
+                "meta.preprocessor"
             ],
             "settings": {
                 "foreground": "#c000ff",
