@@ -175,6 +175,10 @@
         "command": "terminal.focus"
     },
     {
+        "key": "ctrl+shift+b",
+        "command": "build.focus"
+    }
+    {
         "key": "ctrl+shift+r",
         "command": "workbench.debug.action.focusRepl"
     },
