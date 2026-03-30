@@ -176,8 +176,8 @@
     },
     {
         "key": "cmd+shift+b",
-        "command": "build.focus"
-    }
+        "command": "sarif.focus"
+    },
     {
         "key": "cmd+shift+r",
         "command": "workbench.debug.action.focusRepl"
